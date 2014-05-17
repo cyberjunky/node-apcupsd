@@ -63,14 +63,14 @@ function poll() {
           if (wanted.indexOf(label) > -1) {
             value = value.replace(/(^\s+|\s+$)/g, '');
             if (label == 'upsname') {
-              upsname = value;
+              devicename = value;
             }
             // check if value is known, if not store and publish value
             if (curvalues[label] != value) {
               curvalues[label] = value;
               // console.log(value+" changed!");
               // publish value
-              mclient.publish(topic+upsname+'/'+label, value, {retain: true});
+              mclient.publish(topic+'/'+devicename+'/'+label, value, {retain: true});
               if (err) throw err;
             }
           }
