@@ -6,12 +6,15 @@
 
 */
 
+'use strict';
+var mqttbroker = { address: 'localhost', port: '1883' };
+var topic = 'ups'; // topic basename
+var devicename = 'YourUPS'; // default, will be overwritten with upsname value
+var pollint = 10000; // poll every 10 seconds, only changed values will be published
+
 var exec = require('child_process').exec;
 var mqtt = require('mqtt');
-var mclient = mqtt.createClient(1883, 'localhost'); // connection to broker
-var topic = 'ups/'; // base topicname
-var upsname = 'YourUPS'; // default
-var pollint = 10000; // poll every 10 seconds, only changed values will be published
+var mclient = mqtt.createClient(mqttbroker.port, mqttbroker.address);
 var curvalues = {}; // holds current values
 
 function executeCmd(cmd, callback) {
