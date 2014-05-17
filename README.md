@@ -53,17 +53,18 @@ OUTPUTV  : 230.0 Volts
 
 Install node-apcupsd
 <pre>
-$ git clone
+$ git clone https://github.com/cyberjunky/node-apcupsd.git
 </pre>
 Install required libs
 <pre>
-npm install
+$ cd node-apcupsd
+$ npm install
 </pre>
 Change MQTT broker address and/or topic
 <pre>
-vi app.js
+$ vi app.js
 </pre>
 Run
 <pre>
-node app.js
+$ node app.js
 </pre>
