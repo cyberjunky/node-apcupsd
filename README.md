@@ -4,9 +4,12 @@ node-apcupsd
 Node.js code for publishing APC UPS info (from apcupsd) to MQTT broker
 
 Install apcupsd
+<pre>
 $ sudo apt-get install apcupsd
+</pre>
 
 Configure
+<pre>
 $ sudo vi /etc/default/apcupsd
 ISCONFIGURED=yes
 
@@ -20,8 +23,10 @@ DEVICE
 
 $ sudo service apcupsd restart
 $ sudo chkconfig apcupsd on
+</pre>
 
 Test
+<pre>
 $ apcaccess
 
 APC      : 001,045,1093
@@ -44,15 +49,21 @@ MINTIMEL : 3 Minutes
 MAXTIME  : 0 Seconds
 OUTPUTV  : 230.0 Volts
 ...
+</pre>
 
 Install node-apcupsd
-git clone
-
+<pre>
+$ git clone
+</pre>
 Install required libs
+<pre>
 npm install
-
+</pre>
 Change MQTT broker address and/or topic
+<pre>
 vi app.js
-
+</pre>
 Run
+<pre>
 node app.js
+</pre>
