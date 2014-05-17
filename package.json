@@ -1,0 +1,15 @@
+{
+  "name": "node-apcupsd",
+  "version": "0.1.0",
+  "author": "Ron Klinkien <ron@cyberjunky.nl>",
+  "dependencies": {
+    "mqtt": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/cyberjunky/node-apcupsd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cyberjunky/node-apcupsd/issues"
+  }
+}
